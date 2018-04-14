@@ -6,14 +6,8 @@ import configureStore from './store/store';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  let store;
-  if (window.currentUser) {
-    const preloadedState = { session: { currentUser: window.currentUser } };
-    store = configureStore(preloadedState);
-    delete window.currentUser;
-  } else {
-    store = configureStore();
-  }
+  let store = configureStore();
+
   window.getState = store.getState;
   window.store = store;
   window.dispatch = store.dispatch;

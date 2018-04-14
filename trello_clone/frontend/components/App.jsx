@@ -11,7 +11,7 @@ import {
 
 const App = () => (
   <div className="mainDiv">
-      
+
   </div>
 );
 
